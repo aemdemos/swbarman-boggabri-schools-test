@@ -1,0 +1,59 @@
+
+/* Wrapper for the entire block */
+.ai-icons-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the block horizontally */
+    padding: 20px;
+}
+
+.ai-icons.block > div > div {
+    display: flex;
+    flex-direction: row; /* Arrange elements side by side */
+    justify-content: center; /* Center all items horizontally */
+    flex-wrap: wrap; /* Allows wrapping of elements if the screen size is too small */
+}
+
+/* Styling for the list */
+.ai-icons.block ul {
+    display: flex;
+    flex-direction: row; /* Arrange list items side by side */
+    justify-content: center; /* Center items within the list */
+    align-items: center; /* Vertically centers the items */
+    padding: 0;
+    list-style: none; /* Removes default bullet points */
+    margin: 0;
+}
+
+/* Styling for each list item */
+.ai-icons.block ul li {
+    display: flex;
+    flex-direction: column; /* Aligns icon and text vertically */
+    align-items: center;
+    margin: 0 20px; /* Adds space around each icon-text pair */
+}
+
+/* Styling for the anchor elements containing the icons */
+.ai-icons.block ul li a {
+    display: flex;
+    flex-direction: column; /* Aligns icon and text vertically */
+    align-items: center;
+    text-align: center;
+    color: #000; /* Text color */
+    text-decoration: none; /* Removes underline from links */
+    margin: 10px 0; /* Adds space between icon and text */
+}
+
+/* Styling for the images */
+.ai-icons.block ul li a picture img {
+    width: 60px; /* Adjust size of the icon */
+    height: 60px;
+    border-radius: 50%; /* Makes the icon circular */
+    background-color: #002855; /* Background color for the icons */
+    padding: 10px;
+}
+
+/* Text styling */
+.ai-icons.block ul li a:last-child {
+    font-weight: bold; /* Makes the text bold */
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+}
