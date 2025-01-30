@@ -1,33 +1,60 @@
 
-/* Scoped CSS for the footer block */
 .ai-footer-logo-wrapper {
   background-color: #e5e5e5; /* Light grey background color */
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 /* Main container for the footer content */
 .ai-footer-logo {
   display: flex; /* Use flexbox to align child elements side-by-side */
   justify-content: space-between; /* Space between the sections */
-  align-items: flex-start; /* Align items to the start vertically */
+  align-items: center; /* Center align items vertically */
   flex-direction: row; /* Ensure the flex direction is row */
+  width: 100%;
 }
 
-/* First div containing the title and contact information */
+/* Container for the title, general enquiries, and follow us */
 .ai-footer-logo > div:first-child {
   display: flex;
-  flex-direction: column; /* Stack elements vertically within the first section */
+  flex-direction: row; /* Ensure the flex direction is row */
   flex: 1; /* Take up available space */
-  margin-right: 20px; /* Space between the text and the logo */
+  justify-content: space-between;
+  align-items: center; /* Center align items vertically */
 }
 
-/* Nested divs inside the first section */
-.ai-footer-logo > div:first-child > div {
+/* Title section */
+.ai-footer-logo > div:first-child > div:nth-child(1) {
   display: flex;
-  flex-direction: row; /* Ensure the flex direction is row for nested elements */
-  flex-wrap: wrap; /* Allow wrapping of elements */
-  width: 100%; /* Ensure each nested div takes full width */
-  margin-bottom: 20px; /* Increase space between elements */
+  flex-direction: column;
+  justify-content: center; /* Center align items vertically */
+  margin-right: 20px;
+}
+
+/* Nested container for general enquiries and follow us */
+.ai-footer-logo > div:first-child > div:nth-child(2) {
+  display: flex;
+  flex-direction: row; /* Ensure the flex direction is row */
+  justify-content: space-between;
+  flex: 1;
+  align-items: flex-start;
+}
+
+/* General enquiries section */
+.ai-footer-logo > div:first-child > div:nth-child(2) > div:nth-child(1) {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Follow us section */
+.ai-footer-logo > div:first-child > div:nth-child(2) > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* Second div containing the logo */
@@ -68,7 +95,7 @@ ul li a:hover {
 /* Adjust media query for larger screens */
 @media (min-width: 900px) {
   .ai-footer-logo {
-    align-items: flex-start; /* Align items to the start vertically */
+    align-items: center; /* Center align items vertically */
     flex-direction: row; /* Ensure the flex direction is row */
     gap: 24px;
   }
