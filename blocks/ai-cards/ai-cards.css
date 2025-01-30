@@ -1,0 +1,83 @@
+
+.ai-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.ai-cards-wrapper > .ai-cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.ai-cards-wrapper > .ai-cards > div {
+  display: flex;
+  flex-direction: row; /* Ensure cards are side by side */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ai-cards-wrapper > .ai-cards > div > div {
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  background: var(--light-color);
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Add margin to separate rows of cards */
+}
+
+.ai-cards-wrapper > .ai-cards > div > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-cards-wrapper picture {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.ai-cards-wrapper p, .ai-cards-wrapper h3 {
+  margin: 10px 0;
+}
+
+.ai-cards-wrapper .button-container {
+  margin-bottom: 20px;
+}
+
+.ai-cards-wrapper .button {
+  padding: 10px 20px;
+  background: var(--link-color);
+  color: var(--background-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.ai-cards-wrapper .button:hover {
+  background: var(--link-hover-color);
+}
+
+.ai-cards-wrapper p:first-of-type {
+  background: var(--dark-color);
+  color: var(--background-color);
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .ai-cards-wrapper > .ai-cards > div {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+  }
+
+  .ai-cards-wrapper > .ai-cards > div > div {
+    flex: 1 1 100%; /* Cards take full width on smaller screens */
+    margin-bottom: 20px;
+  }
+}
